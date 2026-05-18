@@ -13,7 +13,7 @@ const projects = [
     subtitle: "Real-Time Chat Experience",
     description:
       "A modern real-time messaging platform focused on mobile-first UI, smooth interactions, and scalable communication systems.",
-    image: "/projects/whispr.jpg",
+    image: "/images/1.jfif",
     tech: ["Next.js", "Socket.io", "TypeScript"],
   },
   {
@@ -21,7 +21,7 @@ const projects = [
     subtitle: "Interactive Data Visualization",
     description:
       "Premium analytics dashboard built with interactive charts, filtering systems, and clean data-driven UI architecture.",
-    image: "/projects/analytics.jpg",
+    image: "/images/2.jfif",
     tech: ["React", "Charts", "Tailwind"],
   },
   {
@@ -29,7 +29,7 @@ const projects = [
     subtitle: "Modern Shopping Experience",
     description:
       "A scalable eCommerce interface focused on smooth user experience, responsive layouts, and premium visual design.",
-    image: "/projects/ecommerce.jpg",
+    image: "/images/3.jfif",
     tech: ["Next.js", "Stripe", "Framer Motion"],
   },
 ];
@@ -117,7 +117,7 @@ export default function Projects() {
                   />
 
                   {/* Image */}
-                  <div className="relative h-[500px]">
+                  <div className="relative h-[450px]">
 
                     <Image
                       src={project.image}

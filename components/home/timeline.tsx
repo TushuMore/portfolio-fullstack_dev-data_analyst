@@ -7,102 +7,225 @@ const timeline = [
     year: "2024",
     title: "Started Web Development",
     description:
-      "Started learning modern frontend development with React, Next.js, and Tailwind CSS.",
+      "Began learning modern frontend development with React, Next.js, and Tailwind CSS while exploring UI/UX systems and responsive design.",
   },
   {
     year: "2025",
-    title: "Built Real Projects",
+    title: "Built Real-World Projects",
     description:
-      "Created chat apps, analytics dashboards, AI tools, and modern UI projects.",
+      "Developed chat applications, analytics dashboards, AI-powered tools, and scalable frontend systems with modern architecture.",
   },
   {
     year: "2025",
-    title: "Google Data Analytics",
+    title: "Entered Data Analytics",
     description:
-      "Learned Python, SQL, data visualization, data cleaning, and analytics workflows.",
+      "Learned Python, SQL, data cleaning, visualization, and analytical workflows through practical datasets and Google Data Analytics training.",
   },
   {
     year: "2026",
-    title: "Agency & Portfolio Building",
+    title: "Professional Growth",
     description:
-      "Focused on premium UI/UX, freelance-ready projects, and professional branding.",
+      "Focused on premium digital experiences, freelance-ready development, branding, performance optimization, and scalable product thinking.",
   },
 ];
 
 export default function Timeline() {
   return (
-    <section className="px-6 pb-24">
-      <div className="max-w-5xl mx-auto">
+    <section className="relative px-6 py-32 overflow-hidden">
+
+      {/* Glow */}
+      {/* <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-sky-500/10 blur-3xl rounded-full" /> */}
+
+      <div className="max-w-7xl mx-auto">
 
         {/* Heading */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-14"
+          className="mb-24"
         >
-          <p className="text-sky-400 mb-3">
+
+          <p className="text-sky-400 mb-5">
             Journey
           </p>
 
-          <h2 className="text-4xl md:text-5xl font-bold">
-            Experience & Learning
+          <h2
+            className="
+              text-[3.5rem]
+              md:text-[6rem]
+              font-black
+              leading-[0.9]
+              tracking-[-0.05em]
+            "
+          >
+            Learning
+            <span className="block text-slate-500">
+              Experience.
+            </span>
           </h2>
+
         </motion.div>
 
         {/* Timeline */}
-        <div className="relative border-l border-white/10 ml-4">
+        <div className="relative">
 
-          {timeline.map((item, index) => (
-            <motion.div
-              key={item.title}
-              initial={{ opacity: 0, x: 40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="mb-12 ml-8 relative"
-            >
+          {/* Center Line */}
+          <div
+            className="
+              absolute
+              left-1/2
+              top-0
+              hidden lg:block
+              w-px
+              h-full
+              bg-gradient-to-b
+              from-transparent
+              via-white/10
+              to-transparent
+            "
+          />
 
-              {/* Dot */}
-              <div
-                className="
-                  absolute
-                  -left-[41px]
-                  top-1
-                  w-5 h-5
-                  rounded-full
-                  bg-sky-400
-                  shadow-lg shadow-sky-500/50
-                "
-              />
+          <div className="space-y-24">
 
-              {/* Card */}
-              <div
-                className="
-                  rounded-3xl
-                  border border-white/10
-                  bg-white/5
-                  backdrop-blur-xl
-                  p-6
-                "
+            {timeline.map((item, index) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className={`
+                  relative
+                  grid lg:grid-cols-2 gap-10 items-center
+                  ${index % 2 !== 0 ? "lg:[&>*:first-child]:order-2" : ""}
+                `}
               >
-                <span className="text-sky-400 text-sm">
-                  {item.year}
-                </span>
 
-                <h3 className="text-2xl font-semibold mt-2">
-                  {item.title}
-                </h3>
+                {/* Content */}
+                <div>
 
-                <p className="text-slate-400 mt-3 leading-relaxed">
-                  {item.description}
-                </p>
-              </div>
+                  <motion.div
+                    whileHover={{ y: -6 }}
+                    className="
+                      relative
+                      overflow-hidden
+                      rounded-[36px]
+                      border border-white/10
+                      bg-white/5
+                      backdrop-blur-2xl
+                      p-8 md:p-10
+                    "
+                  >
 
-            </motion.div>
-          ))}
+                    {/* Hover Gradient */}
+                    <div
+                      className="
+                        absolute inset-0
+                        opacity-0 hover:opacity-100
+                        transition duration-500
+                        bg-gradient-to-br
+                        from-sky-500/10
+                        to-purple-500/10
+                      "
+                    />
+
+                    <div className="relative z-10">
+
+                      <span
+                        className="
+                          text-sm
+                          uppercase
+                          tracking-[0.2em]
+                          text-sky-400
+                        "
+                      >
+                        {item.year}
+                      </span>
+
+                      <h3
+                        className="
+                          text-3xl
+                          md:text-4xl
+                          font-black
+                          leading-tight
+                          mt-4
+                        "
+                      >
+                        {item.title}
+                      </h3>
+
+                      <p
+                        className="
+                          text-slate-400
+                          text-lg
+                          leading-relaxed
+                          mt-6
+                        "
+                      >
+                        {item.description}
+                      </p>
+
+                    </div>
+
+                  </motion.div>
+
+                </div>
+
+                {/* Huge Year */}
+                <div
+                  className={`
+                    hidden lg:flex
+                    items-center
+                    ${index % 2 === 0
+                      ? "justify-start pl-20"
+                      : "justify-end pr-20"
+                    }
+                  `}
+                >
+
+                  <motion.h1
+                    initial={{ opacity: 0.2 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    className="
+                      text-[8rem]
+                      xl:text-[10rem]
+                      font-black
+                      leading-none
+                      tracking-[-0.08em]
+                      text-white/[0.04]
+                      select-none
+                    "
+                  >
+                    {item.year}
+                  </motion.h1>
+
+                </div>
+
+                {/* Dot */}
+                <div
+                  className="
+                    hidden lg:block
+                    absolute
+                    left-1/2
+                    top-1/2
+                    -translate-x-1/2
+                    -translate-y-1/2
+                    w-5 h-5
+                    rounded-full
+                    bg-sky-400
+                    shadow-[0_0_30px_rgba(56,189,248,0.8)]
+                  "
+                />
+
+              </motion.div>
+            ))}
+
+          </div>
 
         </div>
+
       </div>
     </section>
   );

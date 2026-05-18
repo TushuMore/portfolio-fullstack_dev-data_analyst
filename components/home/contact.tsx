@@ -1,128 +1,346 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { Mail, ArrowUpRight } from "lucide-react";
+
+import {
+  ArrowUpRight,
+  Mail,
+} from "lucide-react";
+
+import {
+  FaGithub,
+  FaLinkedin,
+} from "react-icons/fa";
 
 export default function Contact() {
   return (
-    <section className="px-6 pb-16">
-      <div className="max-w-5xl mx-auto">
+    <section className="relative px-6 py-32 overflow-hidden">
 
+      {/* Background Glow */}
+      <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-sky-500/10 blur-3xl rounded-full" />
+
+      <div className="max-w-7xl mx-auto">
+
+        {/* Massive Heading */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="
-            relative
-            overflow-hidden
-            rounded-[32px]
-            border border-white/10
-            bg-white/5
-            backdrop-blur-xl
-            p-10 md:p-16
-          "
         >
 
-          {/* Glow */}
-          <div
-            className="
-              absolute
-              top-0 right-0
-              w-72 h-72
-              bg-sky-500/10
-              blur-3xl
-              rounded-full
-            "
-          />
-
-          <p className="text-sky-400 mb-4 relative z-10">
-            Contact
+          <p className="text-sky-400 mb-6">
+            Final Step
           </p>
 
-          <h2 className="text-4xl md:text-6xl font-bold relative z-10 leading-tight">
-            Let’s Build
-            <span className="block text-slate-400">
-              Something Amazing
+          <h2
+            className="
+              text-[4rem]
+              md:text-[7rem]
+              xl:text-[10rem]
+              font-black
+              leading-[0.85]
+              tracking-[-0.08em]
+            "
+          >
+            LET’S
+            <span className="block text-slate-500">
+              CREATE
+            </span>
+
+            <span className="block">
+              SOMETHING
+            </span>
+
+            <span className="block text-sky-400">
+              IMPACTFUL.
             </span>
           </h2>
 
-          <p className="text-slate-400 mt-6 max-w-2xl relative z-10">
-            I’m currently open to internships, freelance projects,
-            collaborations, and full-time opportunities.
-          </p>
-
-          {/* Buttons */}
-          <div className="flex flex-wrap gap-4 mt-10 relative z-10">
-
-            <a
-              href="mailto:your@email.com"
-              className="
-                flex items-center gap-2
-                bg-sky-500 hover:bg-sky-400
-                transition
-                px-6 py-4
-                rounded-2xl
-                font-medium
-              "
-            >
-              <Mail size={20} />
-              Email Me
-            </a>
-
-            <a
-              href="#"
-              className="
-                flex items-center gap-2
-                border border-white/10
-                hover:border-sky-400
-                transition
-                px-6 py-4
-                rounded-2xl
-              "
-            >
-              <FaLinkedin size={20} />
-              LinkedIn
-            </a>
-
-            <a
-              href="#"
-              className="
-                flex items-center gap-2
-                border border-white/10
-                hover:border-sky-400
-                transition
-                px-6 py-4
-                rounded-2xl
-              "
-            >
-              <FaGithub size={20} />
-              GitHub
-            </a>
-
-            <a
-              href="#"
-              className="
-                flex items-center gap-2
-                border border-white/10
-                hover:border-sky-400
-                transition
-                px-6 py-4
-                rounded-2xl
-              "
-            >
-              Resume
-              <ArrowUpRight size={20} />
-            </a>
-
-          </div>
-
         </motion.div>
 
+        {/* Main Layout */}
+        <div className="grid lg:grid-cols-12 gap-8 mt-24">
+
+          {/* LEFT TERMINAL */}
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="
+              lg:col-span-7
+              relative
+              overflow-hidden
+              rounded-[40px]
+              border border-white/10
+              bg-black/40
+              backdrop-blur-2xl
+            "
+          >
+
+            {/* Top Bar */}
+            <div
+              className="
+                flex items-center gap-2
+                px-6 py-5
+                border-b border-white/10
+              "
+            >
+
+              <div className="w-3 h-3 rounded-full bg-red-400" />
+              <div className="w-3 h-3 rounded-full bg-yellow-400" />
+              <div className="w-3 h-3 rounded-full bg-green-400" />
+
+            </div>
+
+            {/* Terminal Content */}
+            <div className="p-8 md:p-10 space-y-6">
+
+              <div>
+                <p className="text-slate-500 mb-2">
+                  ~/introduction
+                </p>
+
+                <p className="text-slate-300 text-lg leading-relaxed">
+                  Hi, I’m Tushar — a Full Stack Developer
+                  and aspiring Data Analyst focused on
+                  creating modern digital products with
+                  clean architecture and premium user experiences.
+                </p>
+              </div>
+
+              <div>
+                <p className="text-slate-500 mb-2">
+                  ~/currently-working-on
+                </p>
+
+                <p className="text-slate-300 text-lg leading-relaxed">
+                  Real-time applications, analytics dashboards,
+                  scalable frontend systems, and visually rich UI experiences.
+                </p>
+              </div>
+
+              <div>
+                <p className="text-slate-500 mb-2">
+                  ~/open-for
+                </p>
+
+                <p className="text-slate-300 text-lg leading-relaxed">
+                  Freelance projects, Hybrid / on-site / work from home job,
+                  collaborations, and impactful opportunities.
+                </p>
+              </div>
+
+              {/* Email */}
+              <div className="pt-6">
+
+                <a
+                  href="mailto:your@email.com"
+                  className="
+                    group
+                    inline-flex items-center gap-3
+                    rounded-2xl
+                    bg-sky-500
+                    hover:bg-sky-400
+                    transition
+                    px-7 py-4
+                    font-semibold
+                  "
+                >
+
+                  <Mail size={20} />
+
+                  Start a Conversation
+
+                  <ArrowUpRight
+                    size={18}
+                    className="
+                      transition
+                      group-hover:-translate-y-1
+                      group-hover:translate-x-1
+                    "
+                  />
+
+                </a>
+
+              </div>
+
+            </div>
+
+          </motion.div>
+
+          {/* RIGHT SIDE */}
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="
+              lg:col-span-5
+              flex flex-col gap-6
+            "
+          >
+
+            {/* LinkedIn */}
+            <a
+              href="#"
+              className="
+                group
+                relative
+                overflow-hidden
+                rounded-[32px]
+                border border-white/10
+                bg-white/5
+                backdrop-blur-2xl
+                p-8
+                hover:border-sky-400
+                transition
+              "
+            >
+
+              <div
+                className="
+                  absolute inset-0
+                  opacity-0 group-hover:opacity-100
+                  transition duration-500
+                  bg-gradient-to-br
+                  from-sky-500/10
+                  to-transparent
+                "
+              />
+
+              <div className="relative z-10">
+
+                <FaLinkedin
+                  size={34}
+                  className="text-sky-400 mb-8"
+                />
+
+                <p className="text-slate-500 mb-3">
+                  Professional Network
+                </p>
+
+                <h3 className="text-3xl font-bold">
+                  LinkedIn
+                </h3>
+
+              </div>
+
+            </a>
+
+            {/* GitHub */}
+            <a
+              href="#"
+              className="
+                group
+                relative
+                overflow-hidden
+                rounded-[32px]
+                border border-white/10
+                bg-white/5
+                backdrop-blur-2xl
+                p-8
+                hover:border-sky-400
+                transition
+              "
+            >
+
+              <div
+                className="
+                  absolute inset-0
+                  opacity-0 group-hover:opacity-100
+                  transition duration-500
+                  bg-gradient-to-br
+                  from-purple-500/10
+                  to-transparent
+                "
+              />
+
+              <div className="relative z-10">
+
+                <FaGithub
+                  size={34}
+                  className="text-sky-400 mb-8"
+                />
+
+                <p className="text-slate-500 mb-3">
+                  Projects & Code
+                </p>
+
+                <h3 className="text-3xl font-bold">
+                  GitHub
+                </h3>
+
+              </div>
+
+            </a>
+
+            {/* Resume */}
+            <a
+              href="#"
+              className="
+                group
+                relative
+                overflow-hidden
+                rounded-[32px]
+                border border-white/10
+                bg-white/5
+                backdrop-blur-2xl
+                p-8
+                hover:border-sky-400
+                transition
+              "
+            >
+
+              <div
+                className="
+                  absolute inset-0
+                  opacity-0 group-hover:opacity-100
+                  transition duration-500
+                  bg-gradient-to-br
+                  from-emerald-500/10
+                  to-transparent
+                "
+              />
+
+              <div className="relative z-10">
+
+                <p className="text-slate-500 mb-3">
+                  Experience & Skills
+                </p>
+
+                <h3 className="text-3xl font-bold">
+                  Resume
+                </h3>
+
+              </div>
+
+            </a>
+
+          </motion.div>
+
+        </div>
+
         {/* Footer */}
-        <footer className="mt-10 text-center text-slate-500 text-sm">
-          © 2026 Tushar More. Built with Next.js & Tailwind CSS.
-        </footer>
+        <div
+          className="
+            flex flex-col md:flex-row
+            md:items-center
+            md:justify-between
+            gap-4
+            mt-16
+            pt-8
+            border-t border-white/10
+          "
+        >
+
+          <p className="text-slate-500">
+            © 2026 Tushar More
+          </p>
+
+          <p className="text-slate-600">
+            Designed & Developed with Next.js
+          </p>
+
+        </div>
 
       </div>
     </section>

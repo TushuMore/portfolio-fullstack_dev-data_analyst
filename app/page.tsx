@@ -1,5 +1,4 @@
 import Hero from "@/components/home/hero";
-import Navbar from "@/components/home/navbar";
 import Background from "@/components/home/background";
 import About from "@/components/home/about";
 import Projects from "@/components/home/projects";
@@ -15,7 +14,6 @@ export default function Home() {
       <SmoothScroll />
 
       <Background />
-      <Navbar />
       <Hero />
       <About />
       <Projects />
