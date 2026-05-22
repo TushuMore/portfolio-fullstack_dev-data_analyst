@@ -92,7 +92,9 @@ export default function Hero() {
             className="flex flex-wrap gap-4 mt-10"
           >
 
-            <button
+            <a
+            href="https://github.com/TushuMore"
+            target="_blank"
               className="
                 group
                 flex items-center gap-2
@@ -109,9 +111,10 @@ export default function Hero() {
                 size={18}
                 className="transition group-hover:translate-x-1"
               />
-            </button>
+            </a>
 
-            <button
+            <a
+            href="#"
               className="
                 border border-white/10
                 hover:border-sky-400
@@ -123,7 +126,7 @@ export default function Hero() {
               "
             >
               Download Resume
-            </button>
+            </a>
 
           </motion.div>
 
@@ -132,7 +135,7 @@ export default function Hero() {
 
             <div>
               <h3 className="text-3xl font-bold text-sky-400">
-                10+
+                5+
               </h3>
 
               <p className="text-slate-500 mt-1">
@@ -142,7 +145,7 @@ export default function Hero() {
 
             <div>
               <h3 className="text-3xl font-bold text-sky-400">
-                1+
+                2+
               </h3>
 
               <p className="text-slate-500 mt-1">

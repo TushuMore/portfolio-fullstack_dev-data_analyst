@@ -24,7 +24,7 @@ const certifications = [
 
 export default function CertificationsPage() {
   return (
-    <main className="min-h-screen bg-[#030712] text-white overflow-hidden relative">
+    <main className="min-h-screen text-white overflow-hidden relative">
       {/* BG */}
       <div className="absolute inset-0 -z-10">
         <div
@@ -37,7 +37,7 @@ export default function CertificationsPage() {
           "
         />
 
-        <div
+        {/* <div
           className="
             absolute bottom-0 right-0
             w-[500px] h-[500px]
@@ -45,7 +45,7 @@ export default function CertificationsPage() {
             blur-3xl
             rounded-full
           "
-        />
+        /> */}
       </div>
 
       {/* HERO */}
@@ -229,27 +229,7 @@ export default function CertificationsPage() {
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="px-6 pb-10">
-        <div
-          className="
-            max-w-7xl mx-auto
-            border-t border-white/10
-            pt-8
-            flex flex-col md:flex-row
-            items-center justify-between
-            gap-4
-          "
-        >
-          <p className="text-slate-500 text-sm">
-            © 2026 Tushar More. All rights reserved.
-          </p>
 
-          <p className="text-slate-600 text-sm">
-            Always learning. Always building.
-          </p>
-        </div>
-      </footer>
     </main>
   );
 }

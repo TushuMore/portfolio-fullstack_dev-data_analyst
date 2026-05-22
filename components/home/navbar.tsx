@@ -12,6 +12,9 @@ import {
   X,
 } from "lucide-react";
 
+import { usePathname } from "next/navigation";
+import AnimatedLogo from "./animated-logo";
+
 const links = [
   {
     name: "Home",
@@ -23,21 +26,23 @@ const links = [
   },
   {
     name: "Projects",
-    href: "#projects",
+    href: "/projects",
   },
   {
     name: "Certifications",
     href: "/certifications",
   },
   {
-    name: "Contact",
-    href: "/contact",
+    name: "FaQ",
+    href: "/faq",
   },
 ];
 
 export default function Navbar() {
 
   const [open, setOpen] = useState(false);
+
+  const pathname = usePathname();
 
   return (
     <>
@@ -83,60 +88,75 @@ export default function Navbar() {
           <div className="relative z-10 flex items-center justify-between">
 
             {/* Logo */}
-            <a
-              href="/"
-              className="
-                text-2xl
-                font-black
-                tracking-tight
-              "
-            >
-              PORTFOLIO
-              <span className="text-sky-400">
-                .
-              </span>
-            </a>
+            <AnimatedLogo/>
 
             {/* Desktop Links */}
             <div className="hidden md:flex items-center gap-2">
 
-              {links.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  className="
-                    group
-                    relative
-                    overflow-hidden
-                    px-5 py-3
-                    rounded-2xl
-                    text-sm
-                    font-medium
-                    text-slate-300
-                    hover:text-white
-                    transition
-                  "
-                >
+              {links.map((link) => {
 
-                  {/* Hover Background */}
-                  <div
-                    className="
-                      absolute inset-0
-                      scale-0
+                const isActive =
+                  pathname === link.href;
+
+                return (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    className={`
+                      group
+                      relative
+                      overflow-hidden
+                      px-5 py-3
                       rounded-2xl
-                      bg-white/10
-                      transition duration-300
-                      group-hover:scale-100
-                    "
-                  />
+                      text-sm
+                      font-medium
+                      transition
+                      ${
+                        isActive
+                          ? "text-white"
+                          : "text-slate-300 hover:text-white"
+                      }
+                    `}
+                  >
 
-                  {/* Text */}
-                  <span className="relative z-10">
-                    {link.name}
-                  </span>
+                    {/* Active Background */}
+                    <div
+                      className={`
+                        absolute inset-0
+                        rounded-2xl
+                        transition duration-300
+                        ${
+                          isActive
+                            ? "bg-sky-500/20 border border-sky-400/20"
+                            : "scale-0 bg-white/10 group-hover:scale-100"
+                        }
+                      `}
+                    />
 
-                </a>
-              ))}
+                    {/* Active Dot */}
+                    {isActive && (
+                      <div
+                        className="
+                          absolute
+                          top-2
+                          right-2
+                          w-2 h-2
+                          rounded-full
+                          bg-sky-400
+                          shadow-lg
+                          shadow-sky-400/50
+                        "
+                      />
+                    )}
+
+                    {/* Text */}
+                    <span className="relative z-10">
+                      {link.name}
+                    </span>
+
+                  </a>
+                );
+              })}
 
             </div>
 
@@ -145,7 +165,7 @@ export default function Navbar() {
 
               {/* Desktop CTA */}
               <a
-                href="#contact"
+                href="/contact"
                 className="
                   hidden md:flex
                   items-center justify-center
@@ -236,50 +256,62 @@ export default function Navbar() {
             >
 
               {/* Links */}
-              {links.map((link, index) => (
-                <motion.a
-                  key={link.name}
-                  href={link.href}
-                  onClick={() => setOpen(false)}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{
-                    delay: index * 0.08,
-                  }}
-                  className="
-                    group
-                    relative
-                    text-5xl
-                    font-black
-                    tracking-tight
-                    text-slate-200
-                    hover:text-sky-400
-                    transition
-                  "
-                >
+              {links.map((link, index) => {
 
-                  {link.name}
+                const isActive =
+                  pathname === link.href;
 
-                  {/* Underline */}
-                  <div
-                    className="
-                      absolute
-                      left-0
-                      -bottom-2
-                      h-[2px]
-                      w-0
-                      bg-sky-400
-                      transition-all duration-300
-                      group-hover:w-full
-                    "
-                  />
+                return (
+                  <motion.a
+                    key={link.name}
+                    href={link.href}
+                    onClick={() => setOpen(false)}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{
+                      delay: index * 0.08,
+                    }}
+                    className={`
+                      group
+                      relative
+                      text-5xl
+                      font-black
+                      tracking-tight
+                      transition
+                      ${
+                        isActive
+                          ? "text-sky-400"
+                          : "text-slate-200 hover:text-sky-400"
+                      }
+                    `}
+                  >
 
-                </motion.a>
-              ))}
+                    {link.name}
+
+                    {/* Underline */}
+                    <div
+                      className={`
+                        absolute
+                        left-0
+                        -bottom-2
+                        h-[2px]
+                        bg-sky-400
+                        transition-all duration-300
+                        ${
+                          isActive
+                            ? "w-full"
+                            : "w-0 group-hover:w-full"
+                        }
+                      `}
+                    />
+
+                  </motion.a>
+                );
+              })}
 
               {/* Mobile CTA */}
               <motion.a
-                href="#contact"
+                href="/contact"
                 onClick={() => setOpen(false)}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}

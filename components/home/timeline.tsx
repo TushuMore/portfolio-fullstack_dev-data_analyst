@@ -16,7 +16,7 @@ const timeline = [
       "Developed chat applications, analytics dashboards, AI-powered tools, and scalable frontend systems with modern architecture.",
   },
   {
-    year: "2025",
+    year: "2026",
     title: "Entered Data Analytics",
     description:
       "Learned Python, SQL, data cleaning, visualization, and analytical workflows through practical datasets and Google Data Analytics training.",

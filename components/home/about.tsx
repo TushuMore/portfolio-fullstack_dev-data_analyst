@@ -97,7 +97,7 @@ export default function About() {
 
               <div>
                 <h3 className="text-5xl font-black text-sky-400">
-                  10+
+                  5+
                 </h3>
 
                 <p className="text-slate-500 mt-2">
@@ -109,7 +109,7 @@ export default function About() {
 
               <div>
                 <h3 className="text-5xl font-black text-sky-400">
-                  1+
+                  2+
                 </h3>
 
                 <p className="text-slate-500 mt-2">
@@ -221,7 +221,7 @@ export default function About() {
                     {item.desc}
                   </p>
 
-                  <button
+                  {/* <button
                     className="
                       flex items-center gap-2
                       mt-8
@@ -237,7 +237,7 @@ export default function About() {
                         group-hover:translate-x-1
                       "
                     />
-                  </button>
+                  </button> */}
 
                 </div>
 

@@ -118,7 +118,7 @@ export default function ContactPage() {
               },
               {
                 title: "Available For",
-                value: "Freelance & Internships",
+                value: "Freelance & Job",
               },
             ].map((item) => (
               <div
@@ -164,7 +164,7 @@ export default function ContactPage() {
 
             {/* GITHUB */}
             <a
-              href="https://github.com/"
+              href="https://github.com/TushuMore"
               target="_blank"
               className="
                 group
@@ -235,7 +235,7 @@ export default function ContactPage() {
 
             {/* LINKEDIN */}
             <a
-              href="https://linkedin.com/"
+              href="https://www.linkedin.com/in/tushar-more-987a69258/"
               target="_blank"
               className="
                 group
@@ -306,7 +306,7 @@ export default function ContactPage() {
 
             {/* EMAIL */}
             <a
-              href="mailto:your@email.com"
+              href="mailto:tusharmore2143@gmail.com"
               className="
                 group
                 relative

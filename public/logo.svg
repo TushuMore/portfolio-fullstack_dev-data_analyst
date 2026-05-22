@@ -1,0 +1,21 @@
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="400" rx="40" fill="#38BDF8"/>
+
+  <!-- Circle -->
+  <circle cx="200" cy="200" r="120" stroke="white" stroke-width="22" fill="none"/>
+
+  <!-- TM Text -->
+  <text 
+    x="200" 
+    y="225" 
+    text-anchor="middle" 
+    fill="white" 
+    font-size="88" 
+    font-family="Arial, Helvetica, sans-serif" 
+    font-weight="700"
+    letter-spacing="-4"
+  >
+    TM
+  </text>
+</svg>

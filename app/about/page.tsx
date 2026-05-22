@@ -1,6 +1,6 @@
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-[#030712] text-white overflow-hidden">
+    <main className="min-h-screen  text-white overflow-hidden">
 
       {/* BACKGROUND */}
       <div className="fixed inset-0 -z-10">
@@ -60,11 +60,11 @@ export default function AboutPage() {
 
               {[
                 {
-                  value: '10+',
+                  value: '5+',
                   label: 'Projects Built',
                 },
                 {
-                  value: '1+',
+                  value: '2+',
                   label: 'Years Learning',
                 },
                 {

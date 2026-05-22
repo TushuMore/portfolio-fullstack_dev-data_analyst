@@ -134,7 +134,7 @@ export default function Contact() {
               <div className="pt-6">
 
                 <a
-                  href="mailto:your@email.com"
+                  href="mailto:tusharmore2143@gmail.com"
                   className="
                     group
                     inline-flex items-center gap-3
@@ -181,7 +181,8 @@ export default function Contact() {
 
             {/* LinkedIn */}
             <a
-              href="#"
+              href="https://www.linkedin.com/in/tushar-more-987a69258/"
+              target="_blank"
               className="
                 group
                 relative
@@ -228,7 +229,8 @@ export default function Contact() {
 
             {/* GitHub */}
             <a
-              href="#"
+              href="https://github.com/TushuMore"
+              target="_blank"
               className="
                 group
                 relative
@@ -275,7 +277,8 @@ export default function Contact() {
 
             {/* Resume */}
             <a
-              href="#"
+              href="https://drive.google.com/file/d/1XzXzXzXzXzXzXzXzXzXzXzXzXzXzXzX/view?usp=sharing"
+              target="_blank"
               className="
                 group
                 relative
@@ -319,28 +322,7 @@ export default function Contact() {
 
         </div>
 
-        {/* Footer */}
-        <div
-          className="
-            flex flex-col md:flex-row
-            md:items-center
-            md:justify-between
-            gap-4
-            mt-16
-            pt-8
-            border-t border-white/10
-          "
-        >
-
-          <p className="text-slate-500">
-            © 2026 Tushar More
-          </p>
-
-          <p className="text-slate-600">
-            Designed & Developed with Next.js
-          </p>
-
-        </div>
+        
 
       </div>
     </section>
