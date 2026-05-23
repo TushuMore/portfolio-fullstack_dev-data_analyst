@@ -6,7 +6,7 @@ export const projects = [
     description:
       "An interactive analytics dashboard designed for data visualization, performance tracking, charts, filtering systems, and modern dashboard experiences with premium UI.",
 
-    image: "/images/2.jpg",
+    image: "/images/dataanalyst.png",
 
     tech: [
       "React",
