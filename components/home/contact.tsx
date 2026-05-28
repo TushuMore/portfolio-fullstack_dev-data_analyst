@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 import {
   ArrowUpRight,
@@ -276,9 +277,7 @@ export default function Contact() {
             </a>
 
             {/* Resume */}
-            <a
-              href="https://drive.google.com/file/d/1XzXzXzXzXzXzXzXzXzXzXzXzXzXzXzX/view?usp=sharing"
-              target="_blank"
+            <Link href="/RESUME.pdf" download
               className="
                 group
                 relative
@@ -316,7 +315,7 @@ export default function Contact() {
 
               </div>
 
-            </a>
+            </Link>
 
           </motion.div>
 
